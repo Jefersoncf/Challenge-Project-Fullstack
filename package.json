@@ -1,0 +1,29 @@
+{
+  "name": "challenge-project-fullstack",
+  "version": "1.0.0",
+  "description": "![Captura de tela 2021-11-08 214941](https://user-images.githubusercontent.com/30291266/140842441-76f0da80-955f-4a50-9c02-775098bdd874.png)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jefersoncf/Challenge-Project-Fullstack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jefersoncf/Challenge-Project-Fullstack/issues"
+  },
+  "homepage": "https://github.com/Jefersoncf/Challenge-Project-Fullstack#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-alpha.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
