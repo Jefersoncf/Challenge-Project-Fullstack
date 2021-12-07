@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('./db');
 
-const User = db.sequelize.define('users', {
+const Message = db.sequelize.define('info_message', {
     id:{ 
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -22,6 +22,6 @@ const User = db.sequelize.define('users', {
     }
 });
 //cria a tabela
-// User.sync({force: true});
+// Message.sync({force: true});
 
-module.exports = User;
+module.exports = Message;

@@ -1,22 +1,32 @@
-const accordion = document.querySelectorAll('.accordion');
+
+const accordion = document.querySelectorAll('.accordion ');
 
 accordion.forEach(element =>{
     element.addEventListener('click',(event) =>{
-       accordion.forEach(el =>{
-           if(el !== event.currentTarget){
-               el.children[1].classList.remove('accordion-content-visible');
-        el.children[0].children[1].classList.remove('fa-minus')
-        el.children[0].children[1].classList.add('fa-plus')
-        console.log(el.children[0].children)
+    
+        accordion.forEach(async element =>{
+            element.children[0].children[1].classList.remove('no-visible');
+            element.children[0].children[2].classList.add('no-visible');
+        })
 
-           }
-       })
+        const accordionContent = event.currentTarget.children[1];
+        accordionContent.classList.toggle('accordion-content-visible')
 
-        event.currentTarget.children[1].classList.toggle('accordion-content-visible')
-        // event.currentTarget.children[0].children[1].classList.remove('fa-plus')
-        event.currentTarget.children[0].children[1].classList.toggle('fa-plus fa-minus')
+        const iconMenos = event.currentTarget.children[0].children[1];
+        const iconMais = event.currentTarget.children[0].children[2];
+       
+       
+         iconMenos.classList.toggle('no-visible')
+        iconMais.classList.toggle('no-visible')
+
     })
 })
+
+// const accordionSelect = document.querySelectorAll('.accordion');
+// accordionSelect.onclick = () => {
+//     img.style.display = 'none';
+// }
+
 
 const containerCarrossel = document.getElementById('container-carrossel')
 const arrowLeft = document.getElementById('arrow-left')

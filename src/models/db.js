@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('transportadora', 'root', '2550',{
+const sequelize = new Sequelize('transpdb', 'root', '2550',{
     host: 'localhost',
     dialect: 'mysql'
 });

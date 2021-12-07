@@ -3,8 +3,6 @@ const path = require('path');
 const routes = require('./routes')
 const bodyParser = require('body-parser');
 
-// const User = require('./models/User');
-
 const server = express();
 
 server.use(express.static('public'));

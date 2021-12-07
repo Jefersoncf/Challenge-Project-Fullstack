@@ -1,5 +1,5 @@
 const express = require('express');
-const User = require('./models/User');
+const User = require('./models/Messager');
 
 const routes = express.Router();
 
@@ -10,13 +10,9 @@ routes.get('/', (req, res) => {
 //testando rota 
 routes.post('/home', async (req, res) =>{ 
     try {
-        await User.create({
-            name: req.body.name,
-            email: req.body.email,
-            message: req.body.message
-        })
-        alert('success')
-            return res.render('index.ejs') 
+        const { name, email, message} =  req.body;
+        await User.create({name, email, message,})
+            return res.render('index.ejs');
     }
     catch(error) {
         return res.status(400).send(error);  
